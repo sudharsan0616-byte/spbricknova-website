@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * SP BrickNova design system.
+ * SP BrickNova dark industrial design system.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 1px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-elevated: var(--elevated);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-brick: var(--brick);
+  --color-brick-deep: var(--brick-deep);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-steel: var(--steel);
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --shadow-panel: 0 24px 60px -32px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 12px 32px -20px rgba(0, 0, 0, 0.5);
+}
+
+:root {
+  --radius: 0.125rem;
+  --background: #0d0d0d;
+  --foreground: #f5f3f1;
+  --card: #191919;
+  --card-foreground: #f5f3f1;
+  --elevated: #1e1e1e;
+  --popover: #1e1e1e;
+  --popover-foreground: #f5f3f1;
+  --primary: #9b1c2b;
+  --primary-foreground: #ffffff;
+  --secondary: #141414;
+  --secondary-foreground: #f5f3f1;
+  --muted: #1e1e1e;
+  --muted-foreground: #85817e;
+  --accent: #1e1e1e;
+  --accent-foreground: #b32638;
+  --destructive: #9b1c2b;
+  --destructive-foreground: #ffffff;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #9b1c2b;
+
+  --brick: #9b1c2b;
+  --brick-deep: #741521;
+  --charcoal: #0d0d0d;
+  --charcoal-soft: #3a3a3d;
+  --steel: #85817e;
+}
+
+[data-theme="light"] {
+  --background: #f5f3f1;
+  --foreground: #292929;
+  --card: #ffffff;
+  --card-foreground: #292929;
+  --elevated: #ffffff;
+  --popover: #ffffff;
+  --popover-foreground: #292929;
+  --primary: #8f1d2c;
+  --primary-foreground: #ffffff;
+  --secondary: #e8e5e2;
+  --secondary-foreground: #292929;
+  --muted: #f1efed;
+  --muted-foreground: #666568;
+  --accent: #f1efed;
+  --accent-foreground: #8f1d2c;
+  --destructive: #8f1d2c;
+  --destructive-foreground: #ffffff;
+  --border: #d6d3d0;
+  --input: #d6d3d0;
+  --ring: #8f1d2c;
+  --brick: #8f1d2c;
+  --brick-deep: #701522;
+  --charcoal: #292929;
+  --charcoal-soft: #666568;
+  --steel: #9a999b;
+  color-scheme: light;
+}
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Section eyebrow label: 01 / OUR PRODUCTS */
+@utility label-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Scroll reveal: elements start hidden, .is-visible commits them */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal-clip {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-visible {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@utility hairline-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 96px 96px;
+}
+
+@layer components {
+  .welcome-modal-enter {
+    animation: welcome-modal-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .welcome-modal-exit {
+    animation: welcome-modal-out 320ms ease-in both;
+  }
+
+  @keyframes welcome-modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes welcome-modal-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+
+  .brand-belt-card[data-featured="true"] {
+    border-color: var(--color-brick);
+    box-shadow:
+      0 24px 48px rgba(0, 0, 0, 0.38),
+      0 0 28px rgba(155, 28, 43, 0.14);
+  }
+
+  .premium-panel {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .premium-panel::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 1.35rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    z-index: -1;
+  }
+}
