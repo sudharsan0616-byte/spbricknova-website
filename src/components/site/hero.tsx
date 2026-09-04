@@ -20,11 +20,6 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[78vh] md:min-h-[82svh] max-w-[1400px] items-center px-5 pt-20 pb-12 sm:pt-24 sm:pb-16 md:pt-28 md:pb-20">
         <div className="max-w-3xl w-full">
-          <div className="reveal flex items-center gap-4">
-            <span className="h-[2px] w-10 bg-brick" />
-            <p className="label-eyebrow text-white/70 text-xs sm:text-sm">Chennai, Tamil Nadu</p>
-          </div>
-
           <h1 className="reveal mt-5 sm:mt-7 font-display text-2xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.1] font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
             SP BRICKNOVA
             <span className="mt-3 sm:mt-4 block text-base sm:text-lg md:text-xl lg:text-2xl leading-tight font-medium tracking-[0.16em] text-white/80 uppercase">
@@ -35,11 +30,11 @@ export function Hero() {
           </h1>
 
           <p className="reveal mt-5 sm:mt-8 font-display text-lg sm:text-xl md:text-2xl lg:text-4xl leading-tight font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
-            Quality Materials.
+            Quality Materials
             <br />
-            Reliable Supply.
+            Reliable Supply
             <br />
-            <span className="text-brick">Timely Delivery.</span>
+            <span className="text-brick">Timely Delivery</span>
           </p>
 
           <p className="reveal mt-4 sm:mt-8 max-w-xl text-sm sm:text-base leading-relaxed text-white/80 drop-shadow-[0_1px_5px_rgba(0,0,0,0.38)]">
@@ -66,8 +61,15 @@ export function Hero() {
               Explore Products
             </a>
           </div>
-        </div>
 
+          <div className="hero-location reveal mt-7 ml-auto w-fit max-w-[min(100%,20rem)] md:absolute md:right-5 md:top-1/2 md:mt-0 md:-translate-y-1/2">
+            <span className="label-eyebrow relative z-10 block px-4 py-3 text-center text-[0.6rem] leading-relaxed tracking-[0.18em] text-white sm:px-5 sm:text-xs">
+              <span className="text-brick">IN AND AROUND</span>
+              <br />
+              CHENNAI, TAMIL NADU
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
