@@ -174,7 +174,6 @@ function WelcomeModal({
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/20 to-brick/10" />
-          <div className="absolute inset-x-6 bottom-6 h-px bg-brick/70 md:inset-x-10" />
         </div>
       </div>
     </div>
