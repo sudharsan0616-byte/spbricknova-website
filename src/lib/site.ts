@@ -1,9 +1,17 @@
 export const CONTACT = {
   business: "SP BrickNova",
   proprietor: "Sudharsan M",
-  location: "Kandigai, Chennai, Tamil Nadu",
+  location:
+    "Plot no: 63, Mahalakshmi Nagar, Extension -3, Nandhivaram, Guduvanchery, Chengalpattu - 603202",
+  address: {
+    streetAddress: "Plot no: 63, Mahalakshmi Nagar, Extension -3",
+    addressLocality: "Nandhivaram, Guduvanchery",
+    addressRegion: "Chengalpattu, Tamil Nadu",
+    postalCode: "603202",
+    addressCountry: "IN",
+  },
   directionUrl:
-    "https://www.google.com/maps/place/Unihomes+1,+Uniworld+City/@12.8367755,80.123752,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5258435c4f34b9:0xfa91fa96c3fd75dc!8m2!3d12.8367755!4d80.1263269!16s%2Fg%2F11gzc56fy?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D",
+    "https://www.google.com/maps/place/12%C2%B050'55.8%22N+80%C2%B004'18.7%22E/@12.8488363,80.0692839,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.8488363!4d80.0718588?hl=en&entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
   phoneDisplay: "+91 73581 97702",
   phoneRaw: "+917358197702",
   whatsapp: "917358197702",

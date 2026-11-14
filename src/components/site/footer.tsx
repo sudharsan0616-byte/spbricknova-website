@@ -53,7 +53,7 @@ export function SiteFooter() {
               </li>
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brick" />
-                <span>{CONTACT.location}</span>
+                <span className="min-w-0 break-words">{CONTACT.location}</span>
               </li>
             </ul>
           </div>

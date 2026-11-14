@@ -45,9 +45,7 @@ export const Route = createFileRoute("/")({
           email: CONTACT.email,
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Chennai",
-            addressRegion: "Tamil Nadu",
-            addressCountry: "IN",
+            ...CONTACT.address,
           },
           areaServed: "Chennai, Tamil Nadu",
         }),

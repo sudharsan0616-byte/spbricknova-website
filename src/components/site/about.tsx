@@ -47,7 +47,7 @@ export function About() {
 
             <div className="mt-6 space-y-4 sm:space-y-5 md:space-y-6">
               <p className="reveal text-[0.875rem] sm:text-[0.95rem] md:text-base leading-relaxed text-muted-foreground max-w-[38rem]">
-                SP BrickNova is a Chennai-based construction material trading and distribution
+                SP BrickNova is a Guduvanchery-based construction material trading and distribution
                 business committed to supplying quality building materials to contractors, builders,
                 developers, industries and individual customers.
               </p>
@@ -82,7 +82,7 @@ export function About() {
               </p>
               <p className="mt-2 sm:mt-3 flex items-center gap-2 font-display text-base sm:text-lg font-semibold text-foreground">
                 <MapPin className="size-4 text-brick shrink-0" strokeWidth={2} />
-                <span>Chennai, Tamil Nadu</span>
+                <span>Guduvanchery, Chengalpattu</span>
               </p>
             </div>
             <div className="pb-5 md:border-r md:border-b-0 md:pb-0 md:pr-6 lg:border-r-0 lg:pr-0">

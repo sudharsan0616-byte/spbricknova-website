@@ -125,12 +125,12 @@ function ContactRow({
         {href ? (
           <a
             href={href}
-            className="mt-1 block truncate text-sm sm:text-base font-medium transition-colors hover:text-brick"
+            className="mt-1 block break-words text-sm sm:text-base font-medium transition-colors hover:text-brick"
           >
             {value}
           </a>
         ) : (
-          <dd className="mt-1 truncate text-sm sm:text-base font-medium">{value}</dd>
+          <dd className="mt-1 break-words text-sm sm:text-base font-medium">{value}</dd>
         )}
       </div>
     </div>
