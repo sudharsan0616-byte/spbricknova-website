@@ -37,7 +37,7 @@ export function EnquiryModalProvider({ children }: { children: React.ReactNode }
   const [welcomeClosing, setWelcomeClosing] = useState(false);
 
   useEffect(() => {
-    const autoOpenTimer = window.setTimeout(() => setWelcomeOpen(true), 400);
+    const autoOpenTimer = window.setTimeout(() => setWelcomeOpen(true), 10_000);
     return () => {
       window.clearTimeout(autoOpenTimer);
     };
