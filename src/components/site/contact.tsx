@@ -59,7 +59,7 @@ export function Contact() {
                 rel="noreferrer noopener"
                 className="inline-flex items-center justify-center sm:justify-start gap-2 border border-border px-5 sm:px-7 py-3 sm:py-4 text-xs sm:text-sm font-semibold tracking-wide text-foreground uppercase transition-colors hover:border-brick hover:bg-brick hover:text-white"
               >
-                <MapPin className="h-4 w-4" /> Get Directions
+                <MapPin className="h-4 w-4" /> Visit Location
               </a>
             </div>
           </div>
